@@ -1,10 +1,12 @@
-from flask import Flask, jsonify, request
+import json
+from flask import Flask, jsonify, request, _request_ctx_stack, render_template
 import os
 import mongoservices
 import mapservices
 from flask_cors import cross_origin
 from functools import wraps
 from six.moves.urllib.request import urlopen
+
 
 AUTH0_DOMAIN = 'dev-s32eql6r5zsd0u3f.us.auth0.com'
 API_AUDIENCE = 'https://santosoaris/api'

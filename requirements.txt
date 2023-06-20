@@ -11,4 +11,5 @@ openrouteservice
 geopandas
 geopy
 requests
+python-jose
 pymongo[srv]
