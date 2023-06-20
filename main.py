@@ -12,6 +12,8 @@ def index():
     return jsonify({"Hallo": "Welcome to your Flask Application"})
 
 @app.route('/api/menu')
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
 def menu():
     return jsonify({"code": "1", "status": "OK", "menus":"menus"})
 
