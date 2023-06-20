@@ -12,4 +12,3 @@ geopandas
 geopy
 requests
 pymongo[srv]
-functools
