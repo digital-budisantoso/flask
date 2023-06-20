@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import os
 import mongoservices
 import mapservices
+from flask_cors import cross_origin
 
 AUTH0_DOMAIN = 'dev-s32eql6r5zsd0u3f.us.auth0.com'
 API_AUDIENCE = 'https://santosoaris/api'
