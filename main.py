@@ -10,7 +10,7 @@ def index():
 
 @app.route('/api/menu')
 def menu():
-    return jsonify({"code": "1", "status": "OK", "menus":["menu1", "menu2", "menu3", "menu4"])	
+    return jsonify({"code": "1", "status": "OK", "menus":["menu1", "menu2", "menu3", "menu4"]})	
 
 
 if __name__ == '__main__':
