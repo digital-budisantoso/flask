@@ -9,7 +9,7 @@ def index():
     return jsonify({"Hallo": "Welcome to your Flask Application"})
 
 @app.route('/api/menu')
-def index():
+def menu():
     return jsonify({"code": "1", "status": "OK", "menus":["menu1", "menu2", "menu3", "menu4"])	
 
 
