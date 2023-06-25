@@ -16,7 +16,7 @@ def menu():
 @app.route('/api/samples', methods=['POST'])
 def save_sample():
     data = request.json
-    return mongosvc.save_smpl(data)	
+    return mongosvc.save_sample(data)	
 
 
 if __name__ == '__main__':
