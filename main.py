@@ -1,8 +1,9 @@
 from flask import Flask, jsonify
 import os
+import mongoservices
 
 app = Flask(__name__)
-
+mongosvc = mongoservices.mongoservices()
 
 @app.route('/')
 def index():
@@ -10,7 +11,12 @@ def index():
 
 @app.route('/api/menu')
 def menu():
-    return jsonify({"code": "1", "status": "OK", "menus":"menus"})	
+    return jsonify({"code": "1", "status": "OK", "menus":"menus"})
+
+@app.route('/api/samples', methods=['POST'])
+def save_sample():
+    data = request.json
+    return mongosvc.save_smpl(data)	
 
 
 if __name__ == '__main__':
